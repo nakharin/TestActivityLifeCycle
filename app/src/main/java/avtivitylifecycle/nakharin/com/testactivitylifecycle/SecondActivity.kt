@@ -54,14 +54,14 @@ class SecondActivity : AppCompatActivity() {
         outState?.run {
             putInt("count", count)
         }
-        Log.i(TAG, "$TAG_CLASS: onSaveInstanceState: ${outState?.toString()}")
+        Log.d(TAG, "$TAG_CLASS: onSaveInstanceState: ${outState?.toString()}")
         super.onSaveInstanceState(outState)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
         super.onRestoreInstanceState(savedInstanceState)
         count = savedInstanceState?.getInt("count", 0)!!
-        Log.i(TAG, "$TAG_CLASS: onRestoreInstanceState: count = $count")
+        Log.d(TAG, "$TAG_CLASS: onRestoreInstanceState: count = $count")
     }
 }
 
